@@ -11,7 +11,9 @@ export type arthematicStoreProps = {
 export const useArthematicStore = create<arthematicStoreProps>((set) => ({
   // set is used to set the values
   count: 0, // initial state
-  addCount: () => set((state: any) => ({ count: state.count + 1 })), // function adding the number
-  subCount: () => set((state: any) => ({ count: state.count - 1 })), // function minus the number
+  addCount: () =>
+    set((state: arthematicStoreProps) => ({ count: state.count + 1 })), // function adding the number
+  subCount: () =>
+    set((state: arthematicStoreProps) => ({ count: state.count - 1 })), // function minus the number
   setName: (userInput: string) => set(() => ({ name: userInput })),
 }));
