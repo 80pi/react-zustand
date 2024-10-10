@@ -32,5 +32,6 @@ export default {
 Back ground of this Application:
 page was divided into 2 parts
 
-- One part is to increase and decrese zustand values by + and -
-- One is to take the userName wil show another half for API calling
+- One part is to increase and decrese zustand values by + and - buttons
+- Other is to take the userName will show button to make API call
+- Here we store the data in Zustand like hitting api if we are getting it storing in Zustand
