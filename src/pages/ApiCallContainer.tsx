@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "../components/Buttons";
-import { useApiStore } from "../store/apiCallStore";
+import { useApiStore, apiStoreProps } from "../store/apiCallStore";
 import { useArthematicStore } from "../store/arthematicStore";
 import ResultsPage from "./ResultsPage";
 
 const ApiCallContainer = () => {
-  const apiCallHandler = useApiStore((state: any) => state.callDataAsync);
-  const apiData = useApiStore((state: any) => state.data); // here it was one way of getting data inside the functional component we can do it in other way check in results page
+  const apiCallHandler = useApiStore(
+    (state: apiStoreProps) => state.callDataAsync
+  );
+  const apiData = useApiStore((state: apiStoreProps) => state.data); // here it was one way of getting data inside the functional component we can do it in other way check in results page
   const enteredName = useArthematicStore((state: any) => state.name);
-  const apiLoading = useApiStore((state: any) => state.loading);
+  const apiLoading = useApiStore((state: apiStoreProps) => state.loading);
   return (
     <>
       {enteredName?.length > 0 && (
