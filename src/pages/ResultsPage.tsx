@@ -1,5 +1,11 @@
 import { respondedApiData } from "./constants";
 
+interface itemDataProps {
+  id: string;
+  firstName: string;
+  age: string;
+}
+
 const ResultsPage = () => {
   const data = respondedApiData(); // here I am calling the func in constansts file where I am getting data fro store to there and I am using it here
   return (
@@ -16,12 +22,12 @@ const ResultsPage = () => {
             </tr>
           </thead>
           <tbody>
-            {data?.users?.map((item: any) => {
+            {data?.users?.map(({ id, firstName, age }: itemDataProps) => {
               return (
-                <tr key={item?.id}>
-                  <td>{item?.id}</td>
-                  <td> {item?.firstName}</td>
-                  <td> {item?.age}</td>
+                <tr key={id}>
+                  <td>{id}</td>
+                  <td> {firstName}</td>
+                  <td> {age}</td>
                 </tr>
               );
             })}

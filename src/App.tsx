@@ -1,11 +1,18 @@
-import ApiCallContainer from "./pages/ApiCallContainer";
-import ButtonsContainer from "./pages/ButtonsContainer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AppContainer from "./pages/AppContainer";
+import TodoContainer from "./pages/Todo/TodoContainer";
+import Header from "./pages/Header";
 
 function App() {
   return (
     <>
-      <ButtonsContainer />
-      <ApiCallContainer />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<AppContainer />} />
+          <Route path="/todo" element={<TodoContainer />} />
+        </Routes>
+      </Router>
     </>
   );
 }

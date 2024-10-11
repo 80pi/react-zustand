@@ -30,8 +30,14 @@ export default {
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 Back ground of this Application:
-page was divided into 2 parts
+This page has 2 routes one is / and other was /todo
+under / page was again divided into 2 parts
 
 - One part is to increase and decrese zustand values by + and - buttons
 - Other is to take the userName will show button to make API call
-- Here we store the data in Zustand like hitting api if we are getting it storing in Zustand
+- Here we store the data in Zustand like hitting api if we are getting it storing in Zustand.
+
+Coming to the part of /todo
+
+- Here user can add, update and delete his todo
+- where we are storing our data same in zustand
