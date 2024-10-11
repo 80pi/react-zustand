@@ -6,7 +6,6 @@ export interface newTodoProps {
 }
 
 export type todoStoreProps = {
-  // just like props defining
   todos: newTodoProps[];
   setTodos: (newTodo: newTodoProps[]) => void;
 };
